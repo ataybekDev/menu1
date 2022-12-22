@@ -1,0 +1,579 @@
+
+@import "globol";
+@import "varables";
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans:wght@100;200;300;400;500;600;800;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+#header{
+  .navbar{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    &--nav{
+        margin-left: 20px;
+      a{
+        font-weight: 400;
+        font-size: 18px;
+        color: #FFFFFF;
+        padding: 0 27px;
+      }
+    }
+  }
+}
+#hero{
+  background: url("/img/fon.png") no-repeat center/cover;
+  min-height: 100vh;
+  .hero{
+      h1 {
+        font-weight: 700;
+        font-size: 36px;
+        color: #FFFFFF;
+        padding-top: 267px;
+        span{
+          font-weight: 700;
+          font-size: 36px;
+          color: #FF9900;
+        }
+      }
+
+    p{
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: #FFFFFF;
+      padding: 40px 0;
+      span{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color:#FF9900;
+      }
+    }
+    &--btn{
+
+      &__one{
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        color: #FFFFFF;
+        padding: 10px 60px;
+        border-radius: 30px 0 0 30px;
+        background: #FF9900;
+        border-radius: 60px 0px 0px 60px;
+      }
+      &__one:hover{
+        background: transparent;
+      }
+      &__two{
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        color: #FFFFFF;
+        border-radius: 0 30px 30px 0;
+        background: #945757;
+        padding: 10px 30px;
+      }
+      &__two:hover{
+        background: transparent;
+      }
+    }
+  }
+}
+#our{
+  background: url("/img/fon2.png") no-repeat center/cover;
+  padding: 40px 0;
+  .our{
+    &--title{
+      h1{
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 44px;
+        color: #FFFFFF;
+        margin: 70px 0;
+        padding-left: 80px;
+      }
+    }
+    &--img{
+      width: 193px;
+      height: 193px;
+      z-index: 100;
+      bottom: 20px;
+
+    }
+    &--block{
+      background: radial-gradient(100% 100% at 0% 0%, rgba(99, 99, 99, 0.58) 0%, rgba(99, 99, 99, 0.58) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+      backdrop-filter: blur(5px);
+      border-radius: 20px;
+    }
+     h1{
+       font-weight: 700;
+       font-size: 18px;
+       line-height: 22px;
+       color: #FFFFFF;
+       padding-bottom: 10px;
+     }
+    p{
+      width: 185px;
+      height: 45px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      text-align: center;
+      color: #FFFFFF;
+      padding-bottom: 30px;
+    }
+    &--input{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      input{
+        width: 8px;
+        height: 8px;
+        background: #FFFFFF;
+        border: 1px solid #FFFFFF;
+      }
+      h3{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        color: #FFFFFF;
+        padding: 0 12px;
+
+      }
+    }
+    h2{
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      text-align: center;
+      color: #FFFFFF;
+      padding: 15px 0;
+    }
+    &--text{
+      display: flex;
+      align-items: center;
+      padding-bottom:15px ;
+      h1{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        color: #FFFFFF;
+      }
+      button{
+       padding: 5px 15px;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        color: #FFFFFF;
+        margin-left: 40px;
+        background: #FF9900;
+        border-radius: 60px;
+      }
+    }
+
+  }
+}
+#cook{
+  padding: 100px 0;
+  background: #000;
+  .cook{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    &--group{
+
+      &__icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 118px;
+        height: 118px;
+        background: #282626;
+        border-radius: 50%;
+        position: absolute;
+        top: -80px;
+        left: 240px;
+        img{
+          color: #FFFFFF;
+        }
+      }
+    }
+    &--group1{
+
+      &__icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 118px;
+        height: 118px;
+        background: #282626;
+        border-radius: 50%;
+        position: absolute;
+        top: 40px;
+        left: 460px;
+        img{
+          color: #FFFFFF;
+        }
+      }
+    }
+    &--group2{
+
+      &__icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 118px;
+        height: 118px;
+        background: #282626;
+        border-radius: 50%;
+        position: absolute;
+        top: 380px;
+        left: 380px;
+        img{
+          color: #FFFFFF;
+        }
+      }
+    }
+    &--group3{
+
+      &__icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 118px;
+        height: 118px;
+        background: #282626;
+        border-radius: 50%;
+        position: absolute;
+        top: 380px;
+        left: 120px;
+        img{
+          color: #FFFFFF;
+        }
+      }
+    }
+    &--group4{
+
+      &__icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 118px;
+        height: 118px;
+        background: #282626;
+        border-radius: 50%;
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        img{
+          color: #FFFFFF;
+        }
+      }
+    }
+    &--title{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      h1{
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        color: #FFFFFF;
+      }
+      h2{
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        color: #FFFFFF;
+        padding-bottom: 50px;
+      }
+      &__icon{
+        display: flex;
+        align-items: center;
+        img{
+          padding: 0 8px;
+          width: 16px;
+          height: 20px;
+        }
+      }
+      &__line{
+        width: 280px;
+        height: 0px;
+        border: 1px solid #FF9900;
+      }
+      p{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: #FFFFFF;
+        width: 306px;
+        height: 109px;
+        padding-top: 20px;
+      }
+    }
+  }
+}
+#inputs{
+  background: url("/img/fon3.png") no-repeat center/cover;
+  min-height: 100%;
+
+  .inputs{
+
+    h1{
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 29px;
+      color: #FF9900;
+      padding: 30px 0;
+    }
+    h2{
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      color: #FF9900;
+    }
+    h3{
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      color: #FF9900;
+      padding-left: 47px;
+    }
+    input{
+      width: 343px;
+      height: 38px;
+      border: 1px solid #FF9900;
+      margin-bottom: 25px;
+      background: #000;
+      color: #FFFFFF;
+    }
+    &--data{
+      display: flex;
+      align-items: center;
+      margin-bottom: 37px;
+      &__one{
+        input{
+          width: 147px;
+          height: 47px;
+          border: 1px solid #FF9900;
+
+        }
+
+      }
+      &__two{
+        input{
+          width: 147px;
+          height: 47px;
+          border: 1px solid #FF9900;
+          margin-left: 47px;
+        }
+
+      }
+    }
+    &--title{
+      input{
+        width: 343px;
+        height: 88px;
+        border: 1px solid #FF9900;
+        margin-bottom: 39px;
+      }
+    }
+    button{
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 29px;
+      color: #FFFFFF;
+      padding: 15px 25px;
+      background: #FF9900;
+      border-radius: 20px;
+    }
+    button:hover{
+      background: transparent;
+    }
+  }
+}
+#block{
+  padding: 40px 0;
+  background: url("/img/fon4.png") no-repeat center/cover;
+  min-height: 100%;
+  .block{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    &--title{
+      &__text{
+        display: flex;
+        align-items: center;
+        padding-bottom: 30px;
+        h1{
+          font-weight: 700;
+          font-size: 36px;
+          line-height: 44px;
+          color: #FFFFFF;
+        }
+        h2{
+          font-size: 36px;
+          line-height: 44px;
+          color: #FFFFFF;
+          padding-left: 37px;
+        }
+
+      }
+      p{
+        width: 375px;
+        height: 120px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: #FFFFFF;
+        padding-bottom: 40px;
+      }
+      button{
+        padding: 10px 25px;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 44px;
+        color: #FFFFFF;
+        border: 1px solid #FF9900;
+        border-radius: 60px;
+        background: transparent;
+      }
+    }
+    &--squore{
+      width: 500px;
+      height: 571px;
+      background: radial-gradient(100% 100% at 0% 33.19%, rgba(126, 126, 126, 0.46) 0%, rgba(114, 112, 112, 0.46) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+      backdrop-filter: blur(5px);
+      border-radius: 60px;
+      &__one{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-bottom: 70px;
+        padding-top: 40px;
+        &--title{
+          h1{
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+            color: #FFFFFF;
+          }
+            &__icon{
+              display: flex;
+              align-items: center;
+              ion-icon{
+                font-weight: 600;
+                font-size: 18px;
+                color: yellow;
+                margin: 15px 5px;
+              }
+            }
+
+
+          p{
+            width: 282px;
+            height: 75px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 15px;
+            color: #FFFFFF;
+            padding-bottom: 15px;
+          }
+          &__text{
+            display: flex;
+            align-items: center;
+            h1{
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 15px;
+              color: #FFFFFF;
+            }
+            h2{
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 15px;
+              color: #FFFFFF;
+              padding-left: 70px;
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+#footer{
+  padding: 20px 0;
+  background: #000;
+  .footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
+    &--nav{
+      display: flex;
+      align-items: center;
+      a{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        color: #FFFFFF;
+        padding: 60px 23px;
+      }
+    }
+    &--img{
+      img{
+        margin-top: 15px;
+      }
+    }
+
+  &--block{
+    display: flex;
+    align-items: center;
+    align-items: flex-start;
+    margin-top: 15px;
+    ion-icon{
+      font-weight: 700;
+      font-size: 24px;
+      color: #FFFFFF;
+      margin-right: 10px;
+    }
+    &__text{
+      h1{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        color: #FFFFFF;
+      }
+
+    }
+
+  }
+    &--contac{
+      display: flex;
+      align-items: center;
+      align-items: flex-start;
+      margin-top: 15px;
+      ion-icon{
+        font-weight: 700;
+        font-size: 24px;
+        color: #FFFFFF;
+        margin-right: 10px;
+      }
+      &__title{
+        h1{
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 14px;
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+}
