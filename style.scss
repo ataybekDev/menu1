@@ -2,6 +2,7 @@
 @import "globol";
 @import "varables";
 @import "mixsin";
+@import "media";
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans:wght@100;200;300;400;500;600;800;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 
@@ -9,6 +10,7 @@
   .navbar{
     display: flex;
     align-items: center;
+    justify-content: start;
     position: fixed;
     width: 100%;
     z-index: 100;
@@ -57,7 +59,7 @@
       &__one{
         font-weight: 600;
         font-size: 18px;
-        line-height: 22px;
+        //line-height: 22px;
         color: #FFFFFF;
         padding: 10px 60px;
         border-radius: 30px 0 0 30px;
@@ -70,11 +72,12 @@
       &__two{
         font-weight: 600;
         font-size: 18px;
-        line-height: 22px;
+        //line-height: 22px;
         color: #FFFFFF;
         border-radius: 0 30px 30px 0;
         background: #945757;
         padding: 10px 30px;
+        margin-left: 19px;
       }
       &__two:hover{
         background: transparent;
@@ -195,11 +198,13 @@
     align-items: center;
     justify-content: space-around;
     &--group{
-       img{
+       &__img{
+         position: relative;
          //position: fixed;
-         //z-index: 10;
+         z-index: 7;
        }
       &__icon{
+        z-index: 8;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -228,15 +233,17 @@
         position: absolute;
         top: 40px;
         left: 460px;
+        z-index: 8;
         img{
           color: #FFFFFF;
         }
       }
     }
     &--group2{
+        position: relative;
       &__icon{
+        position: relative;
         z-index: 6;
-        position: absolute;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -244,20 +251,18 @@
         height: 142px;
         background: #FF9900;
         border-radius: 100%;
-        top: 380px;
-        left: 380px;
+        top: -90px;
+        left: 280px;
+        z-index: 6;
         &--icons{
-          z-index: 5;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          //position: fixed;
+          position: relative;
+          //z-index: 5;
           width: 118px;
           height: 118px;
           background: #282626;
           border-radius: 50%;
-          position: absolute;
-          top: 380px;
-          left: 380px;
+          z-index: 10;
 
         }
         img{
@@ -268,6 +273,7 @@
     &--group3{
 
       &__icon{
+        z-index: 8;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -286,6 +292,7 @@
     &--group4{
 
       &__icon{
+        z-index: 8;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -340,7 +347,7 @@
           padding: 0 0;
           width: 16px;
           height: 20px;
-          bottom: 255px;
+          bottom: 325px;
         }
       }
       &__line{

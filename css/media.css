@@ -1,0 +1,18 @@
+@media (max-width: 1440px) {
+  .container {
+    width: 90%;
+  }
+}
+@media (max-width: 1024px) {
+  #header .navbar {
+    justify-content: center;
+  }
+  #hero .hero {
+    width: 90%;
+  }
+  #block .block {
+    flex-direction: column-reverse;
+  }
+}
+
+/*# sourceMappingURL=media.css.map */

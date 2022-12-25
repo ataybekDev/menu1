@@ -59,9 +59,44 @@ button {
   height: 100%;
 }
 
+@media (max-width: 1440px) {
+  .container {
+    width: 90%;
+  }
+}
+@media (max-width: 1024px) {
+  #header .navbar {
+    justify-content: center;
+  }
+  #hero .hero {
+    width: 90%;
+  }
+  #block .block {
+    flex-direction: column-reverse;
+  }
+  #block .block--title__text {
+    padding-top: 30px;
+  }
+  #cook .cook {
+    flex-direction: column;
+  }
+  #cook .cook--group__icon {
+    display: none;
+  }
+  #cook .cook--group1__icon {
+    display: none;
+  }
+  #cook .cook--group3__icon {
+    display: none;
+  }
+  #cook .cook--group4__icon {
+    display: none;
+  }
+}
 #header .navbar {
   display: flex;
   align-items: center;
+  justify-content: start;
   position: fixed;
   width: 100%;
   z-index: 100;
@@ -107,7 +142,6 @@ button {
 #hero .hero--btn__one {
   font-weight: 600;
   font-size: 18px;
-  line-height: 22px;
   color: #FFFFFF;
   padding: 10px 60px;
   border-radius: 30px 0 0 30px;
@@ -120,11 +154,11 @@ button {
 #hero .hero--btn__two {
   font-weight: 600;
   font-size: 18px;
-  line-height: 22px;
   color: #FFFFFF;
   border-radius: 0 30px 30px 0;
   background: #945757;
   padding: 10px 30px;
+  margin-left: 19px;
 }
 #hero .hero--btn__two:hover {
   background: transparent;
@@ -231,7 +265,12 @@ button {
   align-items: center;
   justify-content: space-around;
 }
+#cook .cook--group__img {
+  position: relative;
+  z-index: 7;
+}
 #cook .cook--group__icon {
+  z-index: 8;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -257,13 +296,17 @@ button {
   position: absolute;
   top: 40px;
   left: 460px;
+  z-index: 8;
 }
 #cook .cook--group1__icon img {
   color: #FFFFFF;
 }
+#cook .cook--group2 {
+  position: relative;
+}
 #cook .cook--group2__icon {
+  position: relative;
   z-index: 6;
-  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -271,26 +314,23 @@ button {
   height: 142px;
   background: #FF9900;
   border-radius: 100%;
-  top: 380px;
-  left: 380px;
+  top: -90px;
+  left: 280px;
+  z-index: 6;
 }
 #cook .cook--group2__icon--icons {
-  z-index: 5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
   width: 118px;
   height: 118px;
   background: #282626;
   border-radius: 50%;
-  position: absolute;
-  top: 380px;
-  left: 380px;
+  z-index: 10;
 }
 #cook .cook--group2__icon img {
   color: #FFFFFF;
 }
 #cook .cook--group3__icon {
+  z-index: 8;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -306,6 +346,7 @@ button {
   color: #FFFFFF;
 }
 #cook .cook--group4__icon {
+  z-index: 8;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -357,7 +398,7 @@ button {
   padding: 0 0;
   width: 16px;
   height: 20px;
-  bottom: 255px;
+  bottom: 325px;
 }
 #cook .cook--title__line {
   width: 280px;

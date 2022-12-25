@@ -1,0 +1,60 @@
+@media (max-width:1440px ) {
+  .container{
+    width: 90%;
+  }
+}
+@media (max-width: 1200px) {
+
+}
+@media (max-width: 1024px) {
+  #header{
+    .navbar{
+      justify-content: center;
+    }
+  }
+#hero{
+  .hero{
+    width: 90%;
+  }
+}
+  #block{
+    .block{
+      flex-direction: column-reverse;
+      &--title{
+        &__text{
+          padding-top: 30px;
+        }
+
+      }
+    }
+  }
+  #cook{
+    .cook{
+      flex-direction: column;
+      &--group{
+        &__icon{
+          display: none;
+        }
+      }
+        &--group1{
+          &__icon{
+            display: none;
+          }
+        }
+        &--group3{
+          &__icon{
+            display: none;
+          }
+        }
+        &--group4{
+          &__icon{
+            display: none;
+          }
+        }
+
+
+
+
+    }
+  }
+}
