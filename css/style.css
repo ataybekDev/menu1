@@ -59,40 +59,6 @@ button {
   height: 100%;
 }
 
-@media (max-width: 1440px) {
-  .container {
-    width: 90%;
-  }
-}
-@media (max-width: 1024px) {
-  #header .navbar {
-    justify-content: center;
-  }
-  #hero .hero {
-    width: 90%;
-  }
-  #block .block {
-    flex-direction: column-reverse;
-  }
-  #block .block--title__text {
-    padding-top: 30px;
-  }
-  #cook .cook {
-    flex-direction: column;
-  }
-  #cook .cook--group__icon {
-    display: none;
-  }
-  #cook .cook--group1__icon {
-    display: none;
-  }
-  #cook .cook--group3__icon {
-    display: none;
-  }
-  #cook .cook--group4__icon {
-    display: none;
-  }
-}
 #header .navbar {
   display: flex;
   align-items: center;
@@ -100,6 +66,84 @@ button {
   position: fixed;
   width: 100%;
   z-index: 100;
+}
+#header .navbar--menu {
+  display: none;
+}
+#header .navbar--menu #menu__toggle {
+  opacity: 0;
+}
+#header .navbar--menu #menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#header .navbar--menu #menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#header .navbar--menu #menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#header .navbar--menu #menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  right: 0;
+}
+#header .navbar--menu .menu__btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+#header .navbar--menu .menu__btn > span,
+#header .navbar--menu .menu__btn > span::before,
+#header .navbar--menu .menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #616161;
+  transition-duration: 0.25s;
+}
+#header .navbar--menu .menu__btn > span::before {
+  content: "";
+  top: -8px;
+}
+#header .navbar--menu .menu__btn > span::after {
+  content: "";
+  top: 8px;
+}
+#header .navbar--menu .menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  right: 100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: #ECEFF1;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+  transition-duration: 0.25s;
+}
+#header .navbar--menu .menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: 0.25s;
+}
+#header .navbar--menu .menu__item:hover {
+  background-color: #CFD8DC;
 }
 #header .navbar--nav {
   margin-left: 20px;
@@ -280,12 +324,12 @@ button {
   border-radius: 50%;
   position: absolute;
   top: -80px;
-  left: 240px;
+  left: 160px;
 }
 #cook .cook--group__icon img {
   color: #FFFFFF;
 }
-#cook .cook--group1__icon {
+#cook .cook--group__icon1 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -295,16 +339,13 @@ button {
   border-radius: 50%;
   position: absolute;
   top: 40px;
-  left: 460px;
+  left: 380px;
   z-index: 8;
 }
-#cook .cook--group1__icon img {
+#cook .cook--group__icon1 img {
   color: #FFFFFF;
 }
-#cook .cook--group2 {
-  position: relative;
-}
-#cook .cook--group2__icon {
+#cook .cook--group__icon2 {
   position: relative;
   z-index: 6;
   display: flex;
@@ -318,7 +359,7 @@ button {
   left: 280px;
   z-index: 6;
 }
-#cook .cook--group2__icon--icons {
+#cook .cook--group__icon2--icons {
   position: relative;
   width: 118px;
   height: 118px;
@@ -326,10 +367,10 @@ button {
   border-radius: 50%;
   z-index: 10;
 }
-#cook .cook--group2__icon img {
+#cook .cook--group img {
   color: #FFFFFF;
 }
-#cook .cook--group3__icon {
+#cook .cook--group__icon3 {
   z-index: 8;
   display: flex;
   align-items: center;
@@ -340,12 +381,12 @@ button {
   border-radius: 50%;
   position: absolute;
   top: 380px;
-  left: 120px;
+  left: 50px;
 }
-#cook .cook--group3__icon img {
+#cook .cook--group__icon3 img {
   color: #FFFFFF;
 }
-#cook .cook--group4__icon {
+#cook .cook--group__icon4 {
   z-index: 8;
   display: flex;
   align-items: center;
@@ -356,13 +397,14 @@ button {
   border-radius: 50%;
   position: absolute;
   top: 40px;
-  left: 40px;
+  left: -30px;
 }
-#cook .cook--group4__icon img {
+#cook .cook--group__icon4 img {
   color: #FFFFFF;
 }
 #cook .cook--title {
   display: flex;
+  align-items: center;
   flex-direction: column;
 }
 #cook .cook--title h1 {
@@ -384,7 +426,7 @@ button {
 #cook .cook--title__icon__icons {
   bottom: 20px;
 }
-#cook .cook--title__icon--one {
+#cook .cook--title__icon__icons--one {
   margin-right: 20px;
   position: relative;
   width: 13px;
@@ -392,13 +434,7 @@ button {
   border: 1px solid #FF9900;
   transform: rotate(90deg);
   bottom: 8px;
-}
-#cook .cook--title__icon img {
-  position: absolute;
-  padding: 0 0;
-  width: 16px;
-  height: 20px;
-  bottom: 325px;
+  color: #FF9900;
 }
 #cook .cook--title__line {
   width: 280px;

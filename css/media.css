@@ -13,6 +13,60 @@
   #block .block {
     flex-direction: column-reverse;
   }
+  #block .block--title__text {
+    padding-top: 30px;
+  }
+  #cook .cook {
+    flex-direction: column;
+  }
+  #cook .cook--group__icon {
+    display: none;
+  }
+  #cook .cook--group__icon1 {
+    display: none;
+  }
+  #cook .cook--group__icon2 {
+    display: none;
+  }
+  #cook .cook--group__icon3 {
+    display: none;
+  }
+  #cook .cook--group__icon4 {
+    display: none;
+  }
+  #footer .footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: start;
+  }
+}
+@media (max-width: 992px) {
+  #footer .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 768px) {
+  #hero .hero h1, #hero .hero p {
+    width: 90%;
+  }
+}
+@media (max-width: 576px) {
+  #block .block--squore__one {
+    width: 90%;
+  }
+  #block .block--title__text {
+    width: 90%;
+    align-items: center;
+  }
+  #block #header .navbar--nav {
+    display: none;
+  }
+  #block #header .navbar--menu {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=media.css.map */
